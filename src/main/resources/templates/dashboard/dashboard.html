@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presupuestos</title>
+
+
+</head>
+<body>
+
+    <main>
+        <h1>Lista de Presupuestos</h1>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Cliente</th>
+                    <th>Estado</th>
+                    <th>Materiales</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Itera sobre los presupuestos -->
+                <tr th:each="budget : ${budgets}">
+                    <td th:text="${budget.id}"></td>
+                    
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+</body>
+</html>
